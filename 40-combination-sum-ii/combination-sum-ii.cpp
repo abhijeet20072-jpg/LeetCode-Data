@@ -10,6 +10,7 @@ public:
         
         for(int i=idx;i<a.size();i++){
         if(i>idx&&a[i]==a[i-1])continue;
+        if(sum+a[i]>t)break;
         d.push_back(a[i]);   //take
         f(ans,d,a,i+1,t);
         d.pop_back();  
